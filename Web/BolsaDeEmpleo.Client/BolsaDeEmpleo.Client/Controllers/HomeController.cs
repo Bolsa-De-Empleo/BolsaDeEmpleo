@@ -30,5 +30,17 @@ namespace BolsaDeEmpleo.Client.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+<<<<<<< Updated upstream
+=======
+
+        public async Task<IActionResult> BuscarEmpleo(string searchString)
+        {
+            //aqui va la logica para buscar en la base de datos el empleo
+            //se necesita agregar al vew que retorna esto un view para que sea vea la lista de empleos 
+
+            return View("EmpleoVIew");
+        }
+
+>>>>>>> Stashed changes
     }
 }
