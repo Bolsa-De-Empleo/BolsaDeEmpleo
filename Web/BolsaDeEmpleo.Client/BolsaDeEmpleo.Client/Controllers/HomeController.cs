@@ -36,7 +36,7 @@ namespace BolsaDeEmpleo.Client.Controllers
         {
             //aqui va la logica para buscar en la base de datos el empleo
             //se necesita agregar al vew que retorna esto un view para que sea vea la lista de empleos 
-
+            // juntarnos
             return View("EmpleoVIew");
         }
 
