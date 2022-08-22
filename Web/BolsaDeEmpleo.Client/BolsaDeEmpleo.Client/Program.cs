@@ -1,4 +1,6 @@
-using BolsaDeEmpleo.Client.Data;
+
+using BolsaDeEmpleo.Api.Data;
+using BolsaDeEmpleo.Api.Data.Servicios;
 
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -20,7 +22,8 @@ namespace BolsaDeEmpleo.Client
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddTransient<EmpleoServicio>();
+            builder.Services.AddHttpClient();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
